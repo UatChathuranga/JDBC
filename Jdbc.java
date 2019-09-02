@@ -7,11 +7,11 @@ public class Jdbc{
   private static String userName;
   private static String password;
   public Jdbc(ConnectionConfig conConfig){
-    host = conConfig.host;
-    port = conConfig.port;
-    db = conConfig.db;
-    userName = conConfig.uname;
-    password = conConfig.pass;
+    host = conConfig.getHost();
+    port = conConfig.getPort();
+    db = conConfig.getDB();
+    userName = conConfig.getUsername();
+    password = conConfig.getPassword();
   }
   private static Connection createConnection(){
     if(connection == null){
