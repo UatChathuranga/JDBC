@@ -34,7 +34,7 @@ public class Jdbc{
     st.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
     return st.getGeneratedKeys();
   }
-  public ResultSet getData(String sql){
+  public ResultSet getData(String sql){ 
     Statement st = getConnection().createStatement();
     return st.executeQuery(sql)
   }
