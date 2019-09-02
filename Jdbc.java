@@ -6,8 +6,12 @@ public class Jdbc{
   private static String db;
   private static String userName;
   private static String password;
-  public Jdbc(){
-    
+  public Jdbc(ConnectionConfig conConfig){
+    host = conConfig.host;
+    port = conConfig.port;
+    db = conConfig.db;
+    userName = conConfig.uname;
+    password = conConfig.pass;
   }
   private static Connection createConnection(){
     if(connection == null){
